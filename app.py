@@ -4,7 +4,7 @@ import pickle as pkl
 import os
 
 # load the data
-data = pd.read_csv('model_data.csv')
+data = pd.read_csv('https://raw.githubusercontent.com/sid-almeida/cement_demand/main/model_data.csv')
 data = data.drop(['Unnamed: 0'], axis=1)
 
 # train model
@@ -15,8 +15,8 @@ gbregressor = GradientBoostingRegressor(n_estimators = 100, random_state = 0)
 model = gbregressor.fit(X_train, y_train)
 
 with st.sidebar:
-    st.image("https://github.com/sid-almeida/datascience/blob/main/bankruptcy_prediction/Brainize%20Tech.png?raw=true", width=250)
-    st.title("Demand Prediction")
+    st.image("https://github.com/sid-almeida/cement_demand/blob/main/Brainize%20Tech.png?raw=true", width=250)
+    st.title("Cement Demand Prediction")
     choice = st.radio("**Navegação:**", ("About", "Prediction"))
     st.info('**Note:** Please be aware that this application is intended solely for educational purposes. It is strongly advised against utilizing this tool for making any financial decisions.')
 
