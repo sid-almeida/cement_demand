@@ -81,3 +81,5 @@ if choice == "Prediction":
     if st.button('Predict'):
         prediction = model.predict([[production, sales, population, gdp, disbursement, interest_rate, month, year]])
         st.success('The demand for the cement company in the given period is {}'.format(prediction[0]))
+
+st.write('Made with ❤️ by [Sidnei Almeida](https://www.linkedin.com/in/saaelmeida93/)')
