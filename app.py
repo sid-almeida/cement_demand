@@ -17,7 +17,7 @@ model = gbregressor.fit(X_train, y_train)
 with st.sidebar:
     st.image("https://github.com/sid-almeida/cement_demand/blob/main/Brainize%20Tech.png?raw=true", width=250)
     st.title("Cement Demand Prediction")
-    choice = st.radio("**Navegação:**", ("About", "Prediction"))
+    choice = st.radio("**Navigation:**", ("About", "Prediction"))
     st.info('**Note:** Please be aware that this application is intended solely for educational purposes. It is strongly advised against utilizing this tool for making any financial decisions.')
 
 if choice == "About":
